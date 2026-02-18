@@ -33,10 +33,10 @@ Run:
 ./torch-blinker.sh
 ```
 # Controls:
-Key      | Action
-n        | Pause / Resume
-q        | Quit
-Ctrl + C | Force exit safely
+Key       Action
+n         Pause / Resume
+q         Quit
+Ctrl + C  Force exit safely
 
 # Configuration
 Inside the script:
