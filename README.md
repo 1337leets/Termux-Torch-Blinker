@@ -52,3 +52,22 @@ Lower values attempt faster blinking, but actual speed depends on Android torch 
 Torch toggling speed is limited by Android's hardware abstraction layer.
 Rapid state switching may not scale linearly due to system-level throttling.
 This project intentionally keeps the implementation minimal and dependency-free.
+
+# Python version
+`torch-blinker.py` does the same job in Python and adds five speed levels that can be changed while it runs.
+
+It uses the `termux` Python module (`from termux import API`) to switch the torch.
+<!-- TODO: add the install command for the termux Python module -->
+
+```bash
+python3 torch-blinker.py
+```
+
+| Key        | Action                                      |
+|------------|---------------------------------------------|
+| `1` to `5` | Toggle interval 0.10, 0.07, 0.05, 0.03 or 0.01 s |
+| `n`        | Pause / Resume                              |
+| `q`        | Quit                                        |
+| `Ctrl+C`   | Force exit safely                           |
+
+It starts at level 3 (0.05 s). As with the shell version, the real blink rate is limited by how fast Android switches the torch.
