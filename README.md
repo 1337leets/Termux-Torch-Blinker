@@ -56,8 +56,11 @@ This project intentionally keeps the implementation minimal and dependency-free.
 # Python version
 `torch-blinker.py` does the same job in Python and adds five speed levels that can be changed while it runs.
 
-It uses the `termux` Python module (`from termux import API`) to switch the torch.
-<!-- TODO: add the install command for the termux Python module -->
+It uses the `termux` Python module from the `termux-api` package on PyPI to switch the torch. The Termux:API app from F-Droid is needed as well.
+
+```bash
+pip install termux-api
+```
 
 ```bash
 python3 torch-blinker.py
